@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Repalet - Comodidades</title>
+    <style>
+        :root {
+            --primary-color: #1E3A8A;
+            --text-color: #1F2937;
+            --bg-color: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --border-color: #E5E7EB;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .logo-placeholder {
+            font-size: 2.2rem;
+            font-weight: 900;
+            font-family: serif;
+            color: #000000;
+            border: 2px solid #000;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .grid-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px 20px;
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .grid-list li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .grid-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .sub-info {
+            color: #4B5563;
+            font-size: 0.88rem;
+            display: block;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-placeholder">R</div>
+        <h1>Refugio Repalet - Comodidades</h1>
+    </header>
+
+    <!-- CABAÑA -->
+    <div class="section-title">Cabaña:</div>
+    <ul class="grid-list">
+        <li>Wifi</li>
+        <li>Estacionamiento privado</li>
+        <li>Patio</li>
+        <li>Lugar para hacer fogata</li>
+        <li>Hamaca</li>
+        <li>Acceso a Playa</li>
+    </ul>
+
+    <!-- COCINA / SALA -->
+    <div class="section-title">Cocina/Sala:</div>
+    <ul class="grid-list">
+        <li>Hervidor de agua</li>
+        <li>Microondas</li>
+        <li>Mini nevera</li>
+        <li>Tostador eléctrico</li>
+        <li>Cubiertos para 2 personas <span class="sub-info">(platos, vasos, copas)</span></li>
+        <li>Batería de cocina <span class="sub-info">(sartén, paila de huevos, 3 ollas)</span></li>
+        <li>Accesorios cocina <span class="sub-info">(paños, lavalozas, esponja, azúcar, sal, aceite)</span></li>
+        <li>Mesa comedor de 2 sillas</li>
+        <li>Sillón</li>
+        <li>Cortinas</li>
+        <li>Extintor</li>
+    </ul>
+
+    <!-- BAÑO -->
+    <div class="section-title">Baño:</div>
+    <ul class="grid-list">
+        <li>Shower door con monomando de ducha teléfono</li>
+        <li>WC, lavamanos</li>
+        <li>Agua caliente</li>
+        <li>Accesorios Baño <span class="sub-info">(Jabón líquido, papel higiénico, papel absorbente, cloro, cepillo WC)</span></li>
+    </ul>
+
+    <!-- HABITACIÓN -->
+    <div class="section-title">Habitación:</div>
+    <ul class="grid-list">
+        <li>Cama de dos plazas</li>
+        <li>2 Almohadas</li>
+        <li>2 Cobertores</li>
+        <li>1 Juego de sábanas</li>
+        <li>Armario</li>
+        <li>Calefactor portátil</li>
+        <li>Plancha</li>
+        <li>Secador de pelo</li>
+        <li>Botiqúin</li>
+        <li>3 Colgadores para la ropa</li>
+        <li>Toallas <span class="sub-info">(3 chicas, 2 grandes)</span></li>
+        <li>Mobiliario <span class="sub-info">(1 silla, 1 velador, 1 lámpara)</span></li>
+        <li>Tendedero de ropa <span class="sub-info">(c/8 ganchos de ropa)</span></li>
+        <li>Balcón privado <span class="sub-info">(2 reposeras y 1 mesita baja exterior)</span></li>
+    </ul>
+</div>
+
+</body>
+</html>
