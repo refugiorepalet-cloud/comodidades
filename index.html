@@ -1,180 +1,282 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Repalet - Comodidades</title>
-    <!-- Carga de la fuente sans-serif limpia idéntica al documento -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refugio Repalet - Comodidades</title>
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f7;
-            color: #2b2b2b;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 
-        /* Contenedor principal estilo hoja carta/A4 */
-        .page-container {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 800px;
-            padding: 50px 60px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border-radius: 4px;
-        }
+* {
+  box-sizing: border-box;
+}
 
-        /* Encabezado con Logo y Título */
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #625b58;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 300;
+}
 
-        header img.logo {
-            max-width: 140px;
-            height: auto;
-            margin-bottom: 15px;
-        }
+.page {
+  width: 100%;
+  max-width: 512px;
+  min-height: 1024px;
+  margin: 0 auto;
+  padding: 28px 10px 30px 14px;
+  background: #ffffff;
+  overflow: hidden;
+}
 
-        header h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: 0.5px;
-        }
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  min-height: 62px;
+  margin: 0 0 77px;
+  color: #514b49;
+}
 
-        /* Layout en 2 columnas para simular exactamente el orden del PDF */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px 40px;
-        }
+.logo {
+  display: block;
+  width: 31px;
+  height: 58px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
 
-        .section-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 4px;
-        }
+.heading h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: -0.35px;
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+.section {
+  margin: 0 0 25px;
+}
 
-        li {
-            font-size: 13.5px;
-            line-height: 1.6;
-            color: #4a4a4a;
-            position: relative;
-            padding-left: 14px;
-        }
+.section h2 {
+  margin: 0 0 9px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #9c9996;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 300;
+}
 
-        /* Viñeta minimalista */
-        li::before {
-            content: "-";
-            position: absolute;
-            left: 0;
-            color: #4a4a4a;
-        }
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  column-gap: 10px;
+}
 
-        .sub-detail {
-            padding-left: 14px;
-            font-size: 12.5px;
-            color: #666666;
-            margin-bottom: 4px;
-            list-style: none;
-        }
+.columns ul,
+.single-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-        .sub-detail::before {
-            content: "";
-        }
+.columns li,
+.single-column li {
+  margin: 0 0 3px;
+  font-size: 15px;
+  line-height: 1.43;
+  font-weight: 300;
+}
 
-        /* Responsivo para celulares */
-        @media (max-width: 600px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            .page-container {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+.columns li::before,
+.single-column li::before {
+  content: "- ";
+}
+
+.subline {
+  display: block;
+}
+
+.cabin {
+  margin-bottom: 25px;
+}
+
+.kitchen {
+  margin-bottom: 34px;
+}
+
+.bathroom {
+  margin-bottom: 34px;
+}
+
+.bedroom {
+  margin-bottom: 0;
+}
+
+@media (max-width: 520px) {
+  .page {
+    min-height: 100vh;
+    padding: 22px 14px 28px;
+  }
+
+  .heading {
+    gap: 13px;
+    margin-bottom: 60px;
+  }
+
+  .logo {
+    width: 27px;
+    height: 51px;
+  }
+
+  .heading h1 {
+    font-size: clamp(17px, 4.5vw, 24px);
+    white-space: normal;
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+    column-gap: 8px;
+  }
+
+  .columns li,
+  .single-column li {
+    font-size: clamp(12px, 3.1vw, 15px);
+  }
+}
+
+@media print {
+  @page {
+    size: 512px 1024px;
+    margin: 0;
+  }
+
+  html, body {
+    background: #ffffff;
+  }
+
+  .page {
+    width: 512px;
+    max-width: none;
+    min-height: 1024px;
+    margin: 0;
+  }
+}
+</style>
 </head>
+
 <body>
+<main class="page">
 
-    <div class="page-container">
-        
-        <header>
-            <img src="logo.png" alt="Refugio Repalet Logo" class="logo">
-            <h1>Refugio Repalet - Comodidades</h1>
-        </header>
+  <header class="heading">
+    <!-- El logotipo está alojado en GitHub como logo.png -->
+    <img
+      class="logo"
+      src="logo.png"
+      alt="R"
+      width="31"
+      height="58"
+    >
+    <h1>Refugio Repalet - Comodidades</h1>
+  </header>
 
-        <div class="content-grid">
-            
-            <!-- Columna Izquierda -->
-            <div class="column">
-                <section>
-                    <h2 class="section-title">Cabaña:</h2>
-                    <ul>
-                        <li>Wifi</li>[cite: 1]
-                        <li>Estacionamiento privado</li>[cite: 1]
-                        <li>Patio</li>[cite: 1]
-                    </ul>
-                </section>
+  <section class="section cabin">
+    <h2>Cabaña:</h2>
 
-                <section style="margin-top: 25px;">
-                    <h2 class="section-title">Cocina/Sala:</h2>
-                    <ul>
-                        <li>Hervidor de agua</li>[cite: 1]
-                        <li>Microondas</li>[cite: 1]
-                        <li>Mini nevera</li>[cite: 1]
-                        <li>Tostador eléctrico</li>[cite: 1]
-                        <li>Cubiertos para 2 personas:</li>[cite: 1]
-                        <li class="sub-detail">(platos, vasos, copas)</li>[cite: 1]
-                        <li>Batería de cocina:</li>[cite: 1]
-                        <li class="sub-detail">(sartén, paila de huevos, ollas)</li>[cite: 1]
-                        <li>Lugar para hacer fogata</li>[cite: 1]
-                        <li>Hamaca</li>[cite: 1]
-                        <li>Acceso a Playa</li>[cite: 1]
-                        <li>Accesorios cocina:</li>[cite: 1]
-                        <li class="sub-detail">(paños, lavalozas, esponja, azúcar, sal, aceite)</li>[cite: 1]
-                        <li>Mesa comedor</li>[cite: 1]
-                        <li>Sillón</li>[cite: 1]
-                        <li>Cortinas</li>[cite: 1]
-                        <li>Extintor</li>[cite: 1]
-                    </ul>
-                </section>
-            </div>
+    <div class="columns">
+      <ul>
+        <li>Wifi</li>
+        <li>Estacionamiento privado</li>
+        <li>Patio</li>
+      </ul>
 
-            <!-- Columna Derecha -->
-            <div class="column">
-                <section>
-                    <h2 class="section-title">Baño:</h2>
-                    <ul>
-                        <li>Shower door con monomando de ducha teléfono</li>[cite: 1]
-                        <li>WC, lavamanos</li>[cite: 1]
-                        <li>Agua caliente</li>[cite: 1]
-                        <li>Accesorios Baño:</li>[cite: 1]
-                        <li class="sub-detail">(Jabón líquido, papel higiénico, papel absorbente, cloro, cepillo WC)</li>[cite: 1]
-                    </ul>
-                </section>
+      <ul>
+        <li>Lugar para hacer fogata</li>
+        <li>Hamaca</li>
+        <li>Acceso a Playa</li>
+      </ul>
+    </div>
+  </section>
 
-                <section style="margin-top: 25px;">
-                    <h2 class="section-title">Habitación:</h2>
-                    <ul>
-                        <li>Cama de dos plazas</li>[cite: 1]
-                        <li>2 Almohadas</li>
+  <section class="section kitchen">
+    <h2>Cocina/Sala:</h2>
+
+    <div class="columns">
+      <ul>
+        <li>Hervidor de agua</li>
+        <li>Microondas</li>
+        <li>Mini nevera</li>
+        <li>Tostador eléctrico</li>
+        <li>
+          Cubiertos para 2 personas:
+          <span class="subline">(platos, vasos, copas)</span>
+        </li>
+        <li>
+          Batería de cocina:
+          <span class="subline">(sartén, paila de huevos, ollas)</span>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          Accesorios cocina:
+          <span class="subline">(paños, lavalozas, esponja, azúcar, sal, aceite)</span>
+        </li>
+        <li>Mesa comedor</li>
+        <li>Sillón</li>
+        <li>Cortinas</li>
+        <li>Extintor</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section bathroom">
+    <h2>Baño:</h2>
+
+    <div class="single-column">
+      <ul>
+        <li>Shower door con monomando de ducha teléfono</li>
+        <li>WC, lavamanos</li>
+        <li>Agua caliente</li>
+        <li>
+          Accesorios Baño:
+          <span class="subline">(Jabón líquido, papel higiénico, papel absorbente, cloro, cepillo WC)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section bedroom">
+    <h2>Habitación:</h2>
+
+    <div class="columns">
+      <ul>
+        <li>Cama de dos plazas</li>
+        <li>2 Almohadas</li>
+        <li>2 Cobertores</li>
+        <li>1 Juego de sábanas</li>
+        <li>Armario</li>
+        <li>Calefactor portátil</li>
+        <li>Plancha</li>
+        <li>Secador de pelo</li>
+      </ul>
+
+      <ul>
+        <li>Botiquín</li>
+        <li>Colgadores para la ropa</li>
+        <li>Toallas</li>
+        <li>Mobiliario</li>
+        <li>Tendedero de ropa</li>
+        <li>Balcón privado</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
